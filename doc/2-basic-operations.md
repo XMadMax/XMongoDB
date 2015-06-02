@@ -8,13 +8,13 @@ $config = new XMongoDBConfig('localhost',27017,'mydb','myuser','mypass');
 $xmongodb = new XMongoDB($config);
 ```
 ## Select
-Select the fields yoy want to be obtanied from mongoDB collection
+Select the fields you want to be obtanied from mongoDB collection
 ```php
 $xmongodb->select(array('myfield1','myfield2','myfield2'));
 ```
 ## Where
 ```php
-$xmongodb->where(array('myfield1' => 'myvalue1', 'myfield2' => 'myvalue2')->get('mycollection');
+$xmongodb->where(array('myfield1' => 'myvalue1', 'myfield2' => 'myvalue2');
 ```
 ## Run Query
 ```php

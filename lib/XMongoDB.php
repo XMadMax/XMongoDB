@@ -22,7 +22,7 @@ use XMongoDB\lib\XMongoDBCursor;
 use XMongoDB\lib\XMongoDBComm;
 
 /**
- * XMongo
+ * XMongoDB
  *
  * Methods to interact with MongoDB
  * @since v1.0
