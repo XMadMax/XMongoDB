@@ -14,8 +14,10 @@ $xmongodb->select(array('myfield1','myfield2','myfield3'));
 ```
 ## Where
 ```php
-$xmongodb->where(array('myfield1' => 'myvalue1', 'myfield2' => 'myvalue2');
+$xmongodb->where(array('myfield1' => 'value1', 'myfield2' => 'value2');
 ```
+Important: each value must to match the type (numeric or string) of the value inserted in the mongodb collection.
+
 See advanced where for more options...[Chapter 3 - Advanced operations](/doc/3-advanced-operations.md)
 ## Run Query
 ```php

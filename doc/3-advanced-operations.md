@@ -1,5 +1,12 @@
 # Advanced operations
 
+## Advanced Where
+
+### Operators != < > <= >=
+Where Not Equal
+```php
+$xmongodb->where_ne('myfield1','value1')
+```
 ## Reconnect to another mongoDB instance
 After you have created the config class, you can reuse to another connection...
 ```php
