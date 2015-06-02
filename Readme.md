@@ -23,9 +23,9 @@ A PHP ORM library to handle opperations with MongoDB
 Getting Started Guide
 ---------------------
 
-  * [Chapter 1 - Installation](doc/1-installation.md)
-  * [Chapter 2 - Basic operations](doc/2-basic-operations.md)
-  * [Chapter 3 - Advanced operations](doc/3-advanced-operations.md)
-  * [Chapter 4 - Execptions](doc/10-exceptions.md)
+  * [Chapter 1 - Installation](/doc/1-installation.md)
+  * [Chapter 2 - Basic operations](/doc/2-basic-operations.md)
+  * [Chapter 3 - Advanced operations](/doc/3-advanced-operations.md)
+  * [Chapter 4 - Execptions](/doc/10-exceptions.md)
 
 
