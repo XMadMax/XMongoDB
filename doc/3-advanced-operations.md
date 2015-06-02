@@ -2,7 +2,7 @@
 
 ## Advanced Where
 
-### Operators != < > <= >=
+### Operators !=, <, >, <=, >=
 #### Where Not Equal
 ```php
 $xmongodb->where_ne('myfield1','value1')
@@ -29,24 +29,20 @@ $xmongodb->where_gte('myfield1','value1')
 $xmongodb->like('myfield1', 'value1', $flags, $enable_start_wildcard , $enable_end_wildcard)
 ```
 Params:
-     * 	@param $flags
-     * 	Allows for the typical regular expression flags:
-     * 		i = case insensitive
-     * 		m = multiline
-     * 		x = can contain comments
-     * 		l = locale
-     * 		s = dotall, "." matches everything, including newlines
-     * 		u = match unicode
-     *
-     * 	@param $enable_start_wildcard
-     * 	If set to anything other than TRUE, a starting line character "^" will be prepended
-     * 	to the search value, representing only searching for a value at the start of
-     * 	a new line.
-     *
-     * 	@param $enable_end_wildcard
-     * 	If set to anything other than TRUE, an ending line character "$" will be appended
-     * 	to the search value, representing only searching for a value at the end of
-     * 	a line.
+
+  - flags:
+    * i = case insensitive (default)
+    * m = multiline
+    * x = can contain comments
+    * l = locale
+    * s = dotall, "." matches everything, including newlines
+    * u = match unicode
+
+  - enable_start_wildcard
+    * If TRUE a starting line character "^" will be prepended, default FALSE
+
+  - enable_end_wildcard
+    * If TRUE an ending line character "$" will be appended, default FALSE
 
 
 
