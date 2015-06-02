@@ -1,5 +1,5 @@
 # Installation
-If you are using composer, add to yout composer.json:
+If you are using composer, add to your composer.json:
 ```bash
     "require": {
     .

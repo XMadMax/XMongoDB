@@ -6,11 +6,22 @@ $config = new XMongoDBConfig('localhost',27017,'mydb','myuser','mypass');
 // Connect MongoDB
 $xmongodb = new XMongoDB($config);
 ```
-Now, you can select collection records
+## Select
+Select the fields yoy want to be obtanied from mongoDB collection
 ```php
-$cursor = $xmongodb->where(array('myfield1' => 'myvalue1', 'myfield2' => 'myvalue2')->get('mycollection');
+$xmongodb->select(array('myfield1','myfield2','myfield2'));
 ```
-The result is a MongoCursor object, and can be manipulated:
+## Where
+```php
+$xmongodb->where(array('myfield1' => 'myvalue1', 'myfield2' => 'myvalue2')->get('mycollection');
+```
+## Run Query
+```php
+$cursor = $xmongodb->get('mycollection');
+```
+The result is a MongoCursor object
+## Manipulation cursors
+Once you has obtained a cursor, you can limit, skip or order results:
 ```php
 // Limit to 10 records max
 $cursor->limit(10);
