@@ -15,7 +15,6 @@
  * @link
  * @version		Version 1.0.0
  */
-
 /**
  * Thanks to Alessandro Arnodo
  */
@@ -25,7 +24,7 @@ namespace XMongoDB\lib;
 use XMongoDB\lib\XMongoDBConfig;
 
 /**
- * cimongo_base
+ * XMongoDBDriver
  * @uses This base class provide a connection object to interact with MongoDB
  * @since v1.0.0
  *

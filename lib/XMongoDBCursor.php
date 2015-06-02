@@ -1,4 +1,5 @@
 <?php
+
 /**
  * XMongoDB Library
  *
@@ -19,9 +20,8 @@ namespace XMongoDB\lib;
 
 use XMongoDB\lib\XMongoDBDriver;
 
-
 /**
- * Cimongo_cursor
+ * XMongoDB_cursor
  *
  * Cursor object, that behaves much like the MongoCursor, but permits to generating query results 
  * @since v1.0.0
@@ -36,7 +36,7 @@ class XMongoDBCursor extends XMongoDBDriver
     protected $_cursor;
 
     /**
-     * Construct a new Cimongo_extras
+     * Construct a new Cursor
      *
      * @param MongoCursor $cursor the cursor returned by the query
      * @since v1.0.0
