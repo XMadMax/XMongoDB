@@ -10,12 +10,13 @@ $xmongodb = new XMongoDB($config);
 ## Select
 Select the fields you want to be obtanied from mongoDB collection
 ```php
-$xmongodb->select(array('myfield1','myfield2','myfield2'));
+$xmongodb->select(array('myfield1','myfield2','myfield3'));
 ```
 ## Where
 ```php
 $xmongodb->where(array('myfield1' => 'myvalue1', 'myfield2' => 'myvalue2');
 ```
+See advanced where for more options...[Chapter 3 - Advanced operations](/doc/3-advanced-operations.md)
 ## Run Query
 ```php
 $cursor = $xmongodb->get('mycollection');
@@ -49,3 +50,5 @@ $totalrows = $cursor->total_rows();
 // Get only num rows retrieved
 $numrows = $cursor->num_rows();
 ```
+
+
