@@ -6,11 +6,6 @@ $config = new XMongoDBConfig('localhost',27017,'mydb','myuser','mypass');
 // Connect MongoDB
 $xmongodb = new XMongoDB($config);
 ```
-After you have created the config class, you can reuse to another connection...
-```php
-$config->setDB('myotherdb','myuser','mypass');
-$xmongodb_other = new \XMongoDB\XMongoDB($config);
-```
 Now, you can select collection records
 ```php
 $cursor = $xmongodb->where(array('myfield1' => 'myvalue1', 'myfield2' => 'myvalue2')->get('mycollection');
