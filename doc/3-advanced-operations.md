@@ -35,6 +35,23 @@ Finds in 'myfield1' where a set of possible values is not found
 $xmongodb->where_not_in('myfield1', array('value1','value2','value3'))
 ```
 
+### Where Between
+Finds in 'myfield1' between two values (including equal)
+```php
+$xmongodb->where_between('myfield1', $x, $y)
+```
+For dates, must to be converted to ISODate (suposing is this data type)
+```php
+$xmongodb->where_between('mydate1', 'ISODate("2015-04-29T00:00:00.000Z")', 'ISODate("2015-04-29T23:59:59.000Z")')
+```
+
+
+### Where Between
+Finds in 'myfield1' between two values (not including equal)
+```php
+$xmongodb->where_between_ne('myfield1', $x, $y)
+```
+
 ## Like
 #### Normal Like
 ```php
