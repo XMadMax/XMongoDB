@@ -291,7 +291,7 @@ class XMongoDBComm extends XMongoDBDriver
     function where_near($field = '', $co = array())
     {
         $this->__where_init($field);
-        $this->where[$what]['$near'] = $co;
+        $this->where[$field]['$near'] = $co;
         return $this;
     }
 

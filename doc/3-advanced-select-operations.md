@@ -1,6 +1,6 @@
-# Advanced operations
+# Advanced Select Operations
 
-## Advanced Where
+## Where Options
 
 ### Operators !=, <, >, <=, >=
 #### Where Not Equal
@@ -52,7 +52,7 @@ Finds in 'myfield1' between two values (not including equal)
 $xmongodb->where_between_ne('myfield1', $x, $y)
 ```
 
-## Like
+## Like Options
 #### Normal Like
 ```php
 $xmongodb->like('myfield1', 'value1', $flags, $disable_start_wildcard , $disable_end_wildcard)
@@ -78,6 +78,28 @@ Params:
 $xmongodb->not_like('myfield1', array('value1','value2','value3'))
 ```
 Finds in 'myfield1' that not contains 'value1', 'value2' neither 'value3'
+
+
+## Insert Options
+If you are inserting only one record:
+```php
+$xmongodb->insert('collection', 
+    array('field1' => 'value1',
+          'field2' => 'value2',
+          'field3' => 'value3'
+        )
+)
+```
+
+If you are inserting a group of records:
+```php
+$xmongodb->insert_batch('collection', array(
+    0 => array('field1' => 'value11','field2' => 'value21','field3' => 'value31'), 
+    1 => array('field1' => 'value12','field2' => 'value22','field3' => 'value32')
+    )
+)
+```
+
 
 ## Reconnect to another mongoDB instance
 After you have created the config class, you can reuse to another connection...

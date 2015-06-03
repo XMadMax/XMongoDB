@@ -24,8 +24,9 @@ Getting Started Guide
 ---------------------
 
   * [Chapter 1 - Installation](/doc/1-installation.md)
-  * [Chapter 2 - Basic operations](/doc/2-basic-operations.md)
-  * [Chapter 3 - Advanced operations](/doc/3-advanced-operations.md)
-  * [Chapter 4 - Execptions](/doc/10-exceptions.md)
+  * [Chapter 2 - Basic select operations](/doc/2-basic-select-operations.md)
+  * [Chapter 3 - Advanced select operations](/doc/3-advanced-select-operations.md)
+  * [Chapter 3 - Insert / Update / Delete ](/doc/4-basic-iud-operations.md)
+  * [Chapter 4 - Exceptions](/doc/10-exceptions.md)
 
 
