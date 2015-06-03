@@ -23,10 +23,22 @@ $xmongodb->where_gt('myfield1','value1')
 ```php
 $xmongodb->where_gte('myfield1','value1')
 ```
-### Like
+### Where In
+Finds in 'myfield1' a set of possible values
+```php
+$xmongodb->where_in('myfield1', array('value1','value2','value3'))
+```
+
+### Where Not In
+Finds in 'myfield1' where a set of possible values is not found
+```php
+$xmongodb->where_not_in('myfield1', array('value1','value2','value3'))
+```
+
+## Like
 #### Normal Like
 ```php
-$xmongodb->like('myfield1', 'value1', $flags, $enable_start_wildcard , $enable_end_wildcard)
+$xmongodb->like('myfield1', 'value1', $flags, $disable_start_wildcard , $disable_end_wildcard)
 ```
 Params:
 
@@ -38,17 +50,17 @@ Params:
     * s = dotall, "." matches everything, including newlines
     * u = match unicode
 
-  - enable_start_wildcard
+  - disable_start_wildcard
     * If TRUE a starting line character "^" will be prepended, default FALSE
 
-  - enable_end_wildcard
+  - disable_end_wildcard
     * If TRUE an ending line character "$" will be appended, default FALSE
 
-
-
-
-
-
+#### Not Like
+```php
+$xmongodb->not_like('myfield1', array('value1','value2','value3'))
+```
+Finds in 'myfield1' that not contains 'value1', 'value2' neither 'value3'
 
 ## Reconnect to another mongoDB instance
 After you have created the config class, you can reuse to another connection...

@@ -251,30 +251,9 @@ class XMongoDB extends XMongoDBComm
      * 	Get the documents where the (string) value of a $field is like a value. The defaults
      * 	allow for a case-insensitive search.
      *
-     * 	@param $flags
-     * 	Allows for the typical regular expression flags:
-     * 		i = case insensitive
-     * 		m = multiline
-     * 		x = can contain comments
-     * 		l = locale
-     * 		s = dotall, "." matches everything, including newlines
-     * 		u = match unicode
-     *
-     * 	@param $enable_start_wildcard
-     * 	If set to anything other than TRUE, a starting line character "^" will be prepended
-     * 	to the search value, representing only searching for a value at the start of
-     * 	a new line.
-     *
-     * 	@param $enable_end_wildcard
-     * 	If set to anything other than TRUE, an ending line character "$" will be appended
-     * 	to the search value, representing only searching for a value at the end of
-     * 	a line.
-     *
-     * 	@usage : $this->xmongodb->like('foo', 'bar', 'im', FALSE, TRUE);
-     * 	@since v1.0.0
      *
      */
-    public function like($field = "", $value = "", $flags = "i", $enable_start_wildcard = FALSE, $enable_end_wildcard = FALSE)
+    public function like($field = "", $value = "", $flags = "i", $disable_start_wildcard = FALSE, $disable_end_wildcard = FALSE)
     {
         $field = (string) trim($field);
         $this->_where_init($field);
@@ -284,10 +263,10 @@ class XMongoDB extends XMongoDBComm
 
         $value = $this->foreignChars($value);
 
-        if ($enable_start_wildcard === TRUE) {
+        if ($disable_start_wildcard === TRUE) {
             $value = "^" . $value;
         }
-        if ($enable_end_wildcard === TRUE) {
+        if ($disable_end_wildcard === TRUE) {
             $value .= "$";
         }
         $regex = "/$value/$flags";
