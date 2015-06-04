@@ -1,4 +1,4 @@
-# Basic Operations
+# Basic Select Operations
 ## Connect
 ```php
 // Create the config class
@@ -18,12 +18,13 @@ $xmongodb->where(array('myfield1' => 'value1', 'myfield2' => 'value2');
 ```
 Important: each value must to match the type (numeric or string) of the value inserted in the mongodb collection.
 
-See advanced where for more options...[Chapter 3 - Advanced operations](/doc/3-advanced-operations.md)
+See advanced where for more options...[Chapter 3 - Advanced select operations](3-advanced-select-operations.md)
 ## Run Query
 ```php
 $cursor = $xmongodb->get('mycollection');
 ```
 The result is a MongoCursor object
+
 ## Manipulating cursors
 Once you has obtained a cursor, you can limit, skip or order results:
 ```php

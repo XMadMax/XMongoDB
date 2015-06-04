@@ -3,6 +3,9 @@
 ## Where Options
 
 ### Operators !=, <, >, <=, >=
+
+References: http://docs.mongodb.org/manual/reference/operator/query-comparison/
+
 #### Where Not Equal
 ```php
 $xmongodb->where_ne('myfield1','value1')
@@ -53,6 +56,9 @@ $xmongodb->where_between_ne('myfield1', $x, $y)
 ```
 
 ## Like Options
+
+References: http://docs.mongodb.org/manual/reference/operator/query/regex/
+
 #### Normal Like
 ```php
 $xmongodb->like('myfield1', 'value1', $flags, $disable_start_wildcard , $disable_end_wildcard)
@@ -79,34 +85,11 @@ $xmongodb->not_like('myfield1', array('value1','value2','value3'))
 ```
 Finds in 'myfield1' that not contains 'value1', 'value2' neither 'value3'
 
+## Other Options
 
-## Insert Options
-If you are inserting only one record:
+#### Distinct
+Distinct can only select only one unique field or subdocument. 
+If the field is a subdocument will return all different subdocuments.
 ```php
-$xmongodb->insert('collection', 
-    array('field1' => 'value1',
-          'field2' => 'value2',
-          'field3' => 'value3'
-        )
-)
-```
-
-If you are inserting a group of records:
-```php
-$xmongodb->insert_batch('collection', array(
-    0 => array('field1' => 'value11','field2' => 'value21','field3' => 'value31'), 
-    1 => array('field1' => 'value12','field2' => 'value22','field3' => 'value32')
-    )
-)
-```
-
-
-## Reconnect to another mongoDB instance
-After you have created the config class, you can reuse to another connection...
-```php
-
-// $congig is an object of a previous XMonfoDBConfig instance
-
-$config->setDB('myotherdb','myuser','mypass');
-$xmongodb_other = new XMongoDB($config);
+$xmongodb->not_like('myfield1', array('value1','value2','value3'))
 ```

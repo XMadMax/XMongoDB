@@ -12,6 +12,8 @@ $xmongodb->insert('collection',
 )
 ```
 
+References: http://docs.mongodb.org/manual/reference/method/db.collection.insert/
+
 ### Insert multiple documents
 If you are inserting a group of documents:
 ```php
@@ -21,6 +23,8 @@ $xmongodb->insert_batch('collection', array(
     )
 )
 ```
+
+References: http://docs.mongodb.org/manual/reference/method/db.collection.insert/
 
 ## Update Options
 ### Update a single document
@@ -41,6 +45,7 @@ Specify an unique key to be sure you update the correct document.
     * multi = true      Insert multiple document (better use update_bach)
     * writeConcern:     WriteConcern, example: array('w'=>'majority','wtimeout'=> 5000)
 
+References : http://docs.mongodb.org/manual/reference/method/db.collection.update/
 
 ### Update multiple documents
 ```php
@@ -51,6 +56,21 @@ $xmongodb->where(array('field1'=>'value1'))->update('collection',
         $options
 )
 ```
+References : http://docs.mongodb.org/manual/reference/method/db.collection.update/
+
+### Update using SET
+```php
+$xmongodb->where(array('field1'=>'value1'))->update('collection', 
+        array('field2' => 'value2',
+              'field3' => 'value3'
+        ),
+        $options
+)
+```
+
+References: http://docs.mongodb.org/manual/reference/operator/update/set/
+
+
 
 ## Reconnect to another mongoDB instance
 After you have created the config class, you can reuse to another connection...
