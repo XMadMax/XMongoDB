@@ -216,6 +216,7 @@ class XMongoDBDriver
         } else {
             $this->connection_string = trim($connection_string);
         }
+        var_dump($this->connection_string);
     }
 
     /**

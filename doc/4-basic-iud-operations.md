@@ -9,7 +9,7 @@ $xmongodb->insert('collection',
           'field2' => 'value2',
           'field3' => 'value3'
         )
-)
+);
 ```
 
 References: http://docs.mongodb.org/manual/reference/method/db.collection.insert/
@@ -21,7 +21,7 @@ $xmongodb->insert_batch('collection', array(
     0 => array('field1' => 'value11','field2' => 'value21','field3' => 'value31'), 
     1 => array('field1' => 'value12','field2' => 'value22','field3' => 'value32')
     )
-)
+);
 ```
 
 References: http://docs.mongodb.org/manual/reference/method/db.collection.insert/
@@ -35,7 +35,7 @@ $xmongodb->where(array('field1'=>'value1'))->update('collection',
               'field3' => 'value3'
         ),
         $options
-)
+);
 ```
 This method only will update first collection found in the where condition. 
 Specify an unique key to be sure you update the correct document.
@@ -54,7 +54,7 @@ $xmongodb->where(array('field1'=>'value1'))->update('collection',
               'field3' => 'value3'
         ),
         $options
-)
+);
 ```
 References : http://docs.mongodb.org/manual/reference/method/db.collection.update/
 
@@ -65,12 +65,24 @@ $xmongodb->where(array('field1'=>'value1'))->update('collection',
               'field3' => 'value3'
         ),
         $options
-)
+);
 ```
 
 References: http://docs.mongodb.org/manual/reference/operator/update/set/
 
 
+## Delete Options
+### Delete a single document
+```php
+$xmongodb->where(array('field1'=>'value1'))->delete_one('collection');
+```
+
+### Delete multple documents
+```php
+$xmongodb->where(array('field1'=>'value1'))->delete('collection');
+```
+
+References: http://docs.mongodb.org/manual/reference/method/db.collection.remove/
 
 ## Reconnect to another mongoDB instance
 After you have created the config class, you can reuse to another connection...

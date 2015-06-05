@@ -284,9 +284,11 @@ class XMongoDB extends XMongoDBComm
         $this->_where_init('$or');
         if (is_array($like) && count($like) > 0) {
             foreach ($like as $admitted) {
+                $admitted = $this->foreignChars(quotemeta( (string) trim($admitted) ));
                 $this->wheres['$or'][] = array($field => new \MongoRegex("/$admitted/$flags"));
             }
         } else {
+            $like = $this->foreignChars(quotemeta( (string) trim($like) ));
             $this->wheres['$or'][] = array($field => new \MongoRegex("/$like/$flags"));
         }
         return $this;
@@ -302,6 +304,7 @@ class XMongoDB extends XMongoDBComm
         $this->_where_init($field);
         if (is_array($like) && count($like) > 0) {
             foreach ($like as $admitted) {
+                $admitted = $this->foreignChars(quotemeta( (string) trim($admitted) ));
                 $this->wheres[$field]['$nin'][] = new \MongoRegex("/$admitted/");
             }
         }
@@ -519,7 +522,7 @@ class XMongoDB extends XMongoDBComm
         } catch (MongoCursorException $e) {
             throw new \Exception("MongoCursorException: Delete of data into MongoDB failed: {$e->getMessage()}", 1012, $e);
         } catch (MongoCursorTimeoutException $e) {
-            show_error("MongoCursorTimeoutException: Delete of data into MongoDB failed: {$e->getMessage()}", 1013, $e);
+            throw new \Exception("MongoCursorTimeoutException: Delete of data into MongoDB failed: {$e->getMessage()}", 1013, $e);
         }
     }
 
@@ -529,7 +532,7 @@ class XMongoDB extends XMongoDBComm
      *
      *   @since v1.3.0
      */
-    public function delete_batch($collection = "", $options = array())
+    public function delete_one($collection = "", $options = array())
     {
         return $this->delete($collection, array('justOne' => FALSE));
     }
