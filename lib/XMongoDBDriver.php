@@ -56,7 +56,7 @@ class XMongoDBDriver
     public function __construct($config)
     {
         if (!class_exists('Mongo')) {
-            throw new \Exception("The MongoDB PECL extension has not been installed or enabled", 1021, $e);
+            throw new \Exception("The MongoDB PECL extension has not been installed or enabled", 1021);
         }
         $this->connection_string($config);
         $this->connect();
@@ -70,7 +70,7 @@ class XMongoDBDriver
     public function switch_db($database = '')
     {
         if (empty($database)) {
-            throw new \Exception("To switch MongoDB databases, a new database name must be specified", 1022, $e);
+            throw new \Exception("To switch MongoDB databases, a new database name must be specified", 1022);
         }
         $this->dbname = $database;
         try {
@@ -89,7 +89,7 @@ class XMongoDBDriver
     public function drop_db($database = '')
     {
         if (empty($database)) {
-            throw new \Exception('Failed to drop MongoDB database because name is empty', 1024, $e);
+            throw new \Exception('Failed to drop MongoDB database because name is empty', 1024);
         } else {
             try {
                 $this->connection->{$database}->drop();
@@ -108,10 +108,10 @@ class XMongoDBDriver
     public function drop_collection($db = "", $col = "")
     {
         if (empty($db)) {
-            throw new \Exception('Failed to drop MongoDB collection because database name is empty', 1026, $e);
+            throw new \Exception('Failed to drop MongoDB collection because database name is empty', 1026);
         }
         if (empty($col)) {
-            throw new \Exception('Failed to drop MongoDB collection because collection name is empty', 1027, $e);
+            throw new \Exception('Failed to drop MongoDB collection because collection name is empty', 1027);
         } else {
             try {
                 $this->connection->{$db}->{$col}->drop();
@@ -194,11 +194,11 @@ class XMongoDBDriver
         $connection_string = "mongodb://";
 
         if (empty($this->host)) {
-            throw new \Exception("The Host must be set to connect to MongoDB", 1029, $e);
+            throw new \Exception("The Host must be set to connect to MongoDB", 1029);
         }
 
         if (empty($this->dbname)) {
-            throw new \Exception("The Database must be set to connect to MongoDB", 1030, $e);
+            throw new \Exception("The Database must be set to connect to MongoDB", 1030);
         }
 
         if (!empty($this->user) && !empty($this->pass)) {
@@ -216,7 +216,7 @@ class XMongoDBDriver
         } else {
             $this->connection_string = trim($connection_string);
         }
-        var_dump($this->connection_string);
+
     }
 
     /**

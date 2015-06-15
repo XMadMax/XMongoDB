@@ -15,7 +15,7 @@ require __DIR__."/../lib/XMongoDBCursor.php";
 require __DIR__."/../lib/XMongoDB.php";
 require __DIR__."/../lib/XMongoDBConfig.php";
 
-echo "<h1>Remember to load examples (/xmongodb/examples/insertExamples.js) in your mongodb instance</h1>";
+echo "<h1>Remember to load examples (/xmongodb/examples/exportExamples.js) in your mongodb instance</h1>";
 
 class test
 {
@@ -25,14 +25,13 @@ class test
     public function __construct()
     {
         // Set MongoConfig
-        $this->xmongoconfig = new XMongoDBConfig('ds036178.mongolab.com',36178,'xmongodb','xmadmax','asklpo6754',true);
+        $this->xmongoconfig = new XMongoDBConfig('localhost',27017,'mydb','','',true);
 
         // Load Mongo connection
         $this->xmongodb = new XMongoDB($this->xmongoconfig);
         // Set debug mode
         $this->xmongodb->debug = true;
         
-       var_dump($this->xmongodb); exit;
     }
     
     public function test1()
