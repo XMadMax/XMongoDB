@@ -43,13 +43,17 @@ Finds in 'myfield1' between two values (including equal)
 ```php
 $xmongodb->where_between('myfield1', $x, $y);
 ```
-For dates, must to be converted to ISODate (suposing is this data type)
+For char dates
+```php
+$xmongodb->where_between('mydate1', '2015-04-29 00:00:00', '2015-04-29 23:59:59');
+```
+For ISODates, must to be converted to ISODate 
 ```php
 $xmongodb->where_between('mydate1', 'ISODate("2015-04-29T00:00:00.000Z")', 'ISODate("2015-04-29T23:59:59.000Z")');
 ```
 
 
-### Where Between
+### Where Not Between
 Finds in 'myfield1' between two values (not including equal)
 ```php
 $xmongodb->where_between_ne('myfield1', $x, $y);

@@ -318,12 +318,12 @@ class XMongoDBComm extends XMongoDBDriver
      */
     public function dec($fields = array(), $value = 0)
     {
-        $this->_update_init('$dec');
+        $this->_update_init('$inc');
         if (is_string($fields)) {
-            $this->updates['$dec'][$fields] = $value;
+            $this->updates['$inc'][$fields] = $value*-1;
         } elseif (is_array($fields)) {
             foreach ($fields as $field => $value) {
-                $this->updates['$dec'][$field] = $value;
+                $this->updates['$inc'][$field] = $value*-1;
             }
         }
         return $this;
