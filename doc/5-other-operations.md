@@ -64,14 +64,6 @@ $xmongodb->pop(array('myarray1','myarray2')
 
 References: http://docs.mongodb.org/manual/reference/operator/update/pop/
 
-#### Pull an element if an array
-Removes the first element that match a value
-Removes the first element in an array
-```php
-$xmongodb->pull('myfield1', array('postalcode'=>'08080'))
-    ->update('collection');
-```
-
 #### Pull an element of an array
 
 Removes the element of an array that match the value
