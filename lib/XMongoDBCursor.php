@@ -8,7 +8,6 @@
  *
  * @package		MongoDB
  * @author		Xavier Perez | xperez@4amics.com
- * @copyright           Copyright (c) 2012, Alessandro Arnodo.
  * @copyright           Copyright (c) 2015, Xavier Perez.
  * @note                Thanks to original script from Alessandro Arnodo
  * @license		http://www.opensource.org/licenses/mit-license.php
