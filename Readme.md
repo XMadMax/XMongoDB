@@ -23,11 +23,11 @@ A PHP ORM library to handle opperations with MongoDB
 Getting Started Guide
 ---------------------
 
-  * [Chapter 1 - Installation]('./doc/1-installation.md')
-  * [Chapter 2 - Basic select operations]('./doc/2-basic-select-operations.md')
-  * [Chapter 3 - Advanced select operations]('./doc/3-advanced-select-operations.md')
-  * [Chapter 4 - Insert / Update / Delete ]('./doc/4-basic-iud-operations.md')
-  * [Chapter 5 - Other operations ]('./doc/5-other-operations.md')
-  * [Chapter 10 - Exceptions]('./doc/10-exceptions.md')
+  * [Chapter 1 - Installation](http://www.phpclasses.org/browse/file/62062.html)
+  * [Chapter 2 - Basic select operations](http://www.phpclasses.org/browse/file/62063.html)
+  * [Chapter 3 - Advanced select operations](http://www.phpclasses.org/browse/file/62064.html)
+  * [Chapter 4 - Insert / Update / Delete ](http://www.phpclasses.org/browse/file/62065.html)
+  * [Chapter 5 - Other operations ](http://www.phpclasses.org/browse/file/62066.html)
+  * [Chapter 10 - Exceptions](http://www.phpclasses.org/browse/file/63208.html)
 
 

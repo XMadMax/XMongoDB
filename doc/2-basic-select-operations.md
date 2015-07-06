@@ -20,7 +20,7 @@ $xmongodb->where(array('myfield1' => 'value1', 'myfield2' => 'value2');
 ```
 Important: each value must to match the type (numeric or string) of the value inserted in the mongodb collection.
 
-See advanced where for more options...[Chapter 3 - Advanced select operations](3-advanced-select-operations.md)
+See advanced where for more options...[Chapter 3 - Advanced select operations](http://www.phpclasses.org/browse/file/62065.html)
 ## Run Query
 
 ```php
