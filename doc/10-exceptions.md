@@ -2,6 +2,7 @@
 
 ## Exceptions can be handled by your code:
 
+```php
 function MyExceptionHandler($exception) {
     $message = $exception->getMessage();
     $code = $exception->getCode();
@@ -20,3 +21,5 @@ function MyExceptionHandler($exception) {
 }
 
 set_exception_handler('MyExceptionHandler');
+```
+

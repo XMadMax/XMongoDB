@@ -31,14 +31,14 @@ Getting Started Guide
 
   * [Chapter 1 - Installation](http://www.phpclasses.org/browse/file/62062.html)
 
-  * [Chapter 2 - Basic select operations](http://www.phpclasses.org/browse/file/62063.html)
+  * [Chapter 2 - Basic select operations](http://www.phpclasses.org/browse/file/62064.html)
 
-  * [Chapter 3 - Advanced select operations](http://www.phpclasses.org/browse/file/62064.html)
+  * [Chapter 3 - Advanced select operations](http://www.phpclasses.org/browse/file/62065.html)
 
-  * [Chapter 4 - Insert / Update / Delete ](http://www.phpclasses.org/browse/file/62065.html)
+  * [Chapter 4 - Insert / Update / Delete ](http://www.phpclasses.org/browse/file/62066.html)
 
-  * [Chapter 5 - Other operations ](http://www.phpclasses.org/browse/file/62066.html)
+  * [Chapter 5 - Other operations ](http://www.phpclasses.org/browse/file/63208.html)
 
-  * [Chapter 10 - Exceptions](http://www.phpclasses.org/browse/file/63208.html)
+  * [Chapter 10 - Exceptions](http://www.phpclasses.org/browse/file/62063.html)
 
 
