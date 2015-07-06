@@ -41,8 +41,9 @@ class test
 
         // Show results & debug
         echo "<h2>RESULTS for award->year == 2001 </h2>";
-        echo "Found ".$result->total_rows()." records<br />";
+        echo "Found ".$result->num_rows()." records of a total of ".$result->total_rows()."<br />";
         var_dump($result->result());
+        
         echo "<h2>DEBUG</h2>";
         var_dump($this->xmongodb->getDebug());
         echo "<hr>";
@@ -62,6 +63,7 @@ class test
         // Show results & debug
         echo "<h2>RESULTS for DISTINCT name.first like 'john'</h2>";
         var_dump($result);
+        
         echo "<h2>DEBUG</h2>";
         var_dump($this->xmongodb->getDebug());
     }
