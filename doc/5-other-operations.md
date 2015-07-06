@@ -1,10 +1,12 @@
 # Other Operations
 ### Get last inserted ID
+
 ```php
 $xmongodb->insert_id();
 ```
 
 ### Add values to an existing set 
+
 ```php
 $xmongodb->addToSet('myfield1',array('myvalue1','myvalue2');
 ```
@@ -13,6 +15,7 @@ References: http://docs.mongodb.org/manual/reference/operator/update/addToSet/
 
 ### Increment the value of a field
 #### Increment only one field
+
 ```php
 $xmongodb->inc('myfield1',1)
     ->where(array('myfield2' => 'myvalue2'))
@@ -20,6 +23,7 @@ $xmongodb->inc('myfield1',1)
 ```
 
 #### Increment multiple fields
+
 ```php
 $xmongodb->inc(array('myfield1','myfield2),1)
     ->where(array('myfield3' => 'myvalue3'))
@@ -29,6 +33,7 @@ References: http://docs.mongodb.org/manual/reference/operator/update/dec/
 
 ### Decrement the value of a field
 #### Decrement only one field
+
 ```php
 $xmongodb->dec('myfield1',1)
     ->where(array('myfield2' => 'myvalue2'))
@@ -36,6 +41,7 @@ $xmongodb->dec('myfield1',1)
 ```
 
 #### Decrement multiple fields
+
 ```php
 $xmongodb->dec(array('myfield1','myfield2),1)
     ->where(array('myfield3' => 'myvalue3'))
@@ -49,6 +55,7 @@ References: http://docs.mongodb.org/manual/reference/operator/update/inc/
 
 #### Pop an element of an array
 Removes the first element in an array
+
 ```php
 $xmongodb->pop('myarray1')
     ->where(array('myfield3' => 'myvalue3'))
@@ -56,6 +63,7 @@ $xmongodb->pop('myarray1')
 ```
 
 Removes the first element in all elements specified
+
 ```php
 $xmongodb->pop(array('myarray1','myarray2')
     ->where(array('myfield3' => 'myvalue3'))
@@ -67,6 +75,7 @@ References: http://docs.mongodb.org/manual/reference/operator/update/pop/
 #### Pull an element of an array
 
 Removes the element of an array that match the value
+
 ```php
 $xmongodb->pull('myfield1', array('postalcode'=>'08080'))
     ->update('collection');
