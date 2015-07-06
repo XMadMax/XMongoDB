@@ -3,6 +3,7 @@
 ## Insert Options
 ### Insert one document
 If you are inserting only one document:
+
 ```php
 $xmongodb->insert('collection', 
     array('field1' => 'value1',
@@ -16,6 +17,7 @@ References: http://docs.mongodb.org/manual/reference/method/db.collection.insert
 
 ### Insert multiple documents
 If you are inserting a group of documents:
+
 ```php
 $xmongodb->insert_batch('collection', array(
     0 => array('field1' => 'value11','field2' => 'value21','field3' => 'value31'), 
@@ -29,6 +31,7 @@ References: http://docs.mongodb.org/manual/reference/method/db.collection.insert
 ## Update Options
 ### Update a single document
 Before an update, ypu must to specify a where condition:
+
 ```php
 $xmongodb->where(array('field1'=>'value1'))->update('collection', 
         array('field2' => 'value2',
@@ -48,6 +51,7 @@ Specify an unique key to be sure you update the correct document.
 References : http://docs.mongodb.org/manual/reference/method/db.collection.update/
 
 ### Update multiple documents
+
 ```php
 $xmongodb->where(array('field1'=>'value1'))->update('collection', 
         array('field2' => 'value2',
@@ -59,6 +63,7 @@ $xmongodb->where(array('field1'=>'value1'))->update('collection',
 References : http://docs.mongodb.org/manual/reference/method/db.collection.update/
 
 ### Update using SET
+
 ```php
 $xmongodb->where(array('field1'=>'value1'))->update('collection', 
         array('field2' => 'value2',
@@ -73,11 +78,12 @@ References: http://docs.mongodb.org/manual/reference/operator/update/set/
 
 ## Delete Options
 ### Delete a single document
+
 ```php
 $xmongodb->where(array('field1'=>'value1'))->delete_one('collection');
 ```
 
-### Delete multple documents
+### Delete multiple documents
 ```php
 $xmongodb->where(array('field1'=>'value1'))->delete('collection');
 ```
@@ -85,11 +91,10 @@ $xmongodb->where(array('field1'=>'value1'))->delete('collection');
 References: http://docs.mongodb.org/manual/reference/method/db.collection.remove/
 
 ## Reconnect to another mongoDB instance
-After you have created the config class, you can reuse to another connection...
+After you have created the config class, you can reuse to another connection:
+
 ```php
-
 // $congig is an object of a previous XMonfoDBConfig instance
-
 $config->setDB('myotherdb','myuser','mypass');
 $xmongodb_other = new XMongoDB($config);
 ```

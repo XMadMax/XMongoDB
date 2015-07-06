@@ -18,11 +18,11 @@ $xmongodb->where_lt('myfield1','value1');
 ```php
 $xmongodb->where_lte('myfield1','value1');
 ```
-#### Where Greather Than
+#### Where Greater Than
 ```php
 $xmongodb->where_gt('myfield1','value1');
 ```
-#### Where Greather Or Equal Than
+#### Where Greater Or Equal Than
 ```php
 $xmongodb->where_gte('myfield1','value1');
 ```

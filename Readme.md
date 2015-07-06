@@ -7,9 +7,9 @@ A PHP ORM library to handle opperations with MongoDB
         $result = $XMongodDB->->where(array('email' => 'email@myemail.com))->get('customers');
   * Where:
     * Between
-    * Greather than
+    * Greater than
     * Lower than
-    * Greather or equal than
+    * Greater or equal than
     * Lower or equal than
     * Not equal
     * Equal
