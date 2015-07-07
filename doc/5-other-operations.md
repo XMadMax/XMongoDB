@@ -118,7 +118,8 @@ Aggregations must to be done in array groups, one for each group (sort, project,
                     'count' => array('$sum',1)
                 ),
         );
-        $result = $xmongodb->aggregate('collection',$aggregate);
+        $query = $xmongodb->aggregate('collection',$aggregate);
+        $result = $query['result'];
 ```
 
 This will find a number of persons found by country, showing the first and the last name.
