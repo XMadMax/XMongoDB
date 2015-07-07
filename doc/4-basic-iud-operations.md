@@ -61,7 +61,10 @@ References : http://docs.mongodb.org/manual/reference/method/db.collection.updat
 
 ### Update using SET
 
+
 ```php
+$xmongodb->set(array('field2' => 'value2', 'field3' => 'value3'))
+         ->where(array('field1'=>'value1'))
          ->update('collection'); 
 ```
 
