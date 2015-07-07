@@ -95,3 +95,30 @@ $xmongodb->pull('myfield1', array('country'=>34, 'city' => 'Barcelona'))
 
 References: http://docs.mongodb.org/manual/reference/operator/update/pullAll/
 
+#### Agregations
+
+Aggregations must to be done in array groups, one for each group (sort, project, group)
+
+
+```php
+        // Group by Country, order by Country
+        $aggregate[] = 
+            array(
+                '$sort' => array('name',1)
+        );
+        $aggregate[] = 
+            array(
+                '$group' => array(
+                    '_id' => array(
+                        'Country' => '$country'
+                        ),
+                    'firstPerson'=> array ('$first','$name'},
+                    'lastPerson' => array ('$last','$name'},
+                    'count' => array('$sum',1)
+                ),
+        );
+        $result = $xmongodb->aggregate('collection',$aggregate);
+```
+
+This will find a number of persons found by country, showing the first and the last name.
+

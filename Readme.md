@@ -8,7 +8,7 @@ A PHP ORM library to handle opperations with MongoDB
   * All commands like ORM, example: 
 
 ```php 
-        $result = $XMongodDB->->where(array('email' => 'email@myemail.com))->get('customers');
+    $result = $XMongodDB->->where(array('email' => 'email@myemail.com))->get('customers');
 ```
 
   * Where:
