@@ -5,8 +5,11 @@ A PHP ORM library to handle opperations with MongoDB
 
   * Select, Distinct, Where, OrderBy, Limit, Offset, Insert, Update, Delete, Create, Pop, Pull, Push, Aggregate, Indexes, Commands, AddtoSet, Inc, Dec
 
-  * All commands like ORM, example:  
+  * All commands like ORM, example: 
+
+```php 
         $result = $XMongodDB->->where(array('email' => 'email@myemail.com))->get('customers');
+```
 
   * Where:
 
