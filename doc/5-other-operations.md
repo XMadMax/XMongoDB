@@ -95,7 +95,7 @@ $xmongodb->pull('myfield1', array('country'=>34, 'city' => 'Barcelona'))
 
 References: http://docs.mongodb.org/manual/reference/operator/update/pullAll/
 
-#### Agregations
+#### Aggregations
 
 Aggregations must to be done in array groups, one for each group (sort, project, group)
 
