@@ -102,6 +102,7 @@ Aggregations must to be done in array groups, one for each group (sort, project,
 
 ```php
         // Group by Country, order by Country
+        $aggregate = array();
         $aggregate[] = 
             array(
                 '$sort' => array('name',1)
