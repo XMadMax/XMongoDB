@@ -30,7 +30,7 @@ References: http://docs.mongodb.org/manual/reference/method/db.collection.insert
 
 ## Update Options
 ### Update a single document
-Before an update, ypu must to specify a where condition:
+Before an update, you must to specify a where condition:
 
 ```php
 $xmongodb->where(array('field1'=>'value1'))->update('collection', 
@@ -43,21 +43,18 @@ $xmongodb->where(array('field1'=>'value1'))->update('collection',
 This method only will update first collection found in the where condition. 
 Specify an unique key to be sure you update the correct document.
 
-  - Options:
-    * upsert = true     Create a new document if nothing found
-    * multi = true      Insert multiple document (better use update_bach)
-    * writeConcern:     WriteConcern, example: array('w'=>'majority','wtimeout'=> 5000)
+  - $options:
+    * array('upsert' => true)     Create a new document if nothing found
 
 References : http://docs.mongodb.org/manual/reference/method/db.collection.update/
 
 ### Update multiple documents
 
 ```php
-$xmongodb->where(array('field1'=>'value1'))->update('collection', 
+$xmongodb->where(array('field1'=>'value1'))->update_batch('collection', 
         array('field2' => 'value2',
               'field3' => 'value3'
-        ),
-        $options
+        )
 );
 ```
 References : http://docs.mongodb.org/manual/reference/method/db.collection.update/
